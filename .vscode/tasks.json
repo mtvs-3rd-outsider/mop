@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Next.js Dev",
+            "type": "shell",
+            "command": "yarn",
+            "args": [
+                "dev"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/master-of-prediction-frontend",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "group": "build"
+        },
+        {
+            "label": "Spring Boot Run (Backend)",
+            "type": "shell",
+            "command": "gradlew",
+            "args": [
+                "bootRun",
+                "--continuous",
+                "-Dspring-boot.run.jvmArguments='-Dspring.devtools.restart.enabled=true'",
+                "-Dfile.encoding=UTF-8"
+                //, "--debug-jvm"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/master-of-prediction-backend",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Web + Backend",
+            "dependsOn": [
+                "Next.js Dev",
+                "Spring Boot Run (Backend)"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+} 

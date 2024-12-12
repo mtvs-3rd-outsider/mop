@@ -1,0 +1,6 @@
+[submodule "master-of-prediction-backend"]
+	path = master-of-prediction-backend
+	url = git@github.com:mtvs-3rd-outsider/master-of-prediction-backend.git
+[submodule "master-of-prediction-frontend"]
+	path = master-of-prediction-frontend
+	url = git@github.com:mtvs-3rd-outsider/master-of-prediction-frontend.git

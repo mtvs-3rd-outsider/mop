@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+alt+n",  // Next.js
+        "command": "workbench.action.tasks.runTask",
+        "args": "Next.js Dev"
+    },
+    {
+        "key": "ctrl+alt+b",  // Backend
+        "command": "workbench.action.tasks.runTask",
+        "args": "Spring Boot Run (Backend)"
+    },
+    {
+        "key": "ctrl+alt+f",  // Full stack
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Web + Backend"
+    }
+] 

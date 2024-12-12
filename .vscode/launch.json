@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Next.js Debug",
+            "cwd": "${workspaceFolder}/master-of-prediction-frontend",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run", "dev"],
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Launch Spring Boot App",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005,
+            "preLaunchTask": "Spring Boot Run (Backend)"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PredictionApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.outsider.prediction.PredictionApplication",
+            "projectName": "master-of-prediction-backend",
+            "args": "",
+            "envFile": "${workspaceFolder}/master-of-prediction-backend/.env"
+        }
+    ]
+} 
