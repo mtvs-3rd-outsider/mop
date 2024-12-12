@@ -9,10 +9,22 @@
                 "dev"
             ],
             "options": {
-                "cwd": "${workspaceFolder}/master-of-prediction-frontend",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": ["/c"]
+                "cwd": "${workspaceFolder}/master-of-prediction-frontend"
+            },
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": ["/c"]
+                    }
+                }
+            },
+            "osx": {
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
                 }
             },
             "group": "build"
@@ -29,10 +41,24 @@
                 //, "--debug-jvm"
             ],
             "options": {
-                "cwd": "${workspaceFolder}/master-of-prediction-backend",
-                "shell": {
-                    "executable": "cmd.exe",
-                    "args": ["/c"]
+                "cwd": "${workspaceFolder}/master-of-prediction-backend"
+            },
+            "windows": {
+                "command": "gradlew",
+                "options": {
+                    "shell": {
+                        "executable": "cmd.exe",
+                        "args": ["/c"]
+                    }
+                }
+            },
+            "osx": {
+                "command": "./gradlew",
+                "options": {
+                    "shell": {
+                        "executable": "/bin/bash",
+                        "args": ["-c"]
+                    }
                 }
             },
             "group": "build",
@@ -50,4 +76,4 @@
             }
         }
     ]
-} 
+}
